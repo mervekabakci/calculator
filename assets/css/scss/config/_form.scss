@@ -1,0 +1,17 @@
+.userFormWrapper{
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+.form {
+    width: 100%;
+  .form-label {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .btn {
+    transition: all 0.3s linear;
+  }
+}
+

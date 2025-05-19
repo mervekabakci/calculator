@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap Makinesi</title>
+
+    <!--Google font embed start-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--Google font embed end-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/app.min.css">
+</head>
+<body>
+    <div class="container d-flex vh-100">
+        <div class="userFormWrapper col-lg-8 col-11 shadow-lg bg-light p-5 rounded-5 align-self-center mx-auto">
+            <form id="userInfoForm" class="form needs-validation" novalidate>
+                <div class="row">
+                    <div class="mb-4 col-lg-3">
+                        <label for="firstNumber" class="form-label">1. Sayı</label>
+                        <input type="number" class="form-control form-control-lg" name="firstNumber" id="firstNumber" required>
+                        <div class="invalid-feedback">
+                            Lütfen sadece rakam giriniz.
+                        </div>
+                    </div>
+                    <div class="mb-4 col-lg-3">
+                        <label for="processing" class="form-label">İşlem</label>
+                        <select name="processing" id="processing" class="form-select form-select-lg" required>
+                            <option disabled selected value="">Seçiniz</option>
+                            <option value="cikartma">-</option>
+                            <option value="toplama">+</option>
+                            <option value="carpma">*</option>
+                            <option value="bolme">/</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Lütfen İşlem Seçiniz
+                        </div>
+                    </div>
+                    <div class="mb-4 col-lg-3">
+                        <label for="secondNumber" class="form-label">2. Sayı</label>
+                        <input type="number" class="form-control form-control-lg" name="secondNumber" id="secondNumber" required>
+                        <div class="invalid-feedback">
+                            Lütfen sadece rakam giriniz.
+                        </div>
+                    </div>
+                    <div class="mb-4 col-lg-3">
+                        <label for="secondNumber" class="form-label">Sonuç</label>
+                        <div id="result"></div>
+                    </div>
+                </div>
+                <div class="col-12 d-flex align-items-center gap-5">
+                    <button class="btn btn-danger btn-lg px-5 py-3 fw-bold" id="savedButton" type="submit">İşlem Yap</button>
+                </div>
+            </form>
+            <div id="result">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script src="assets/js/app.js" defer></script>
+</body>
+</html>
